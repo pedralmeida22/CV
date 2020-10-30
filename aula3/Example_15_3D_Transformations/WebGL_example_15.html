@@ -132,8 +132,7 @@ The JavaScript code for WebGL.
     // ADD THE MISSING TRIANGLES !!
 
 	// THERE IS JUST 1 TRIANGLE, BELONGING TO THE FRONT FACE !!
-	
-	//gl.enable(gl.CULL_FACE);
+
 
     var vertices = [
 
@@ -144,6 +143,7 @@ The JavaScript code for WebGL.
 			0.25, -0.25,  0.25,
 
 			0.25,  0.25,  0.25,	// um triangulo
+			
 
 			0.25, 0.25, 0.25,
 
@@ -167,37 +167,38 @@ The JavaScript code for WebGL.
 
 			-0.25, 0.25, -0.25,
 
-			// BOTTOM FACE
+			// // BOTTOM FACE
 
 			-0.25, -0.25,  0.25,
 
-			0.25, -0.25,  0.25,
+			0.25, -0.25, -0.25,
+
+			0.25, -0.25,  0.25,			
+
 
 			0.25, -0.25, -0.25,
 
-
-			0.25, -0.25, -0.25,
-
-			-0.25, -0.25, -0.25,
-
-			-0.25, -0.25, 0.25,
-
-			// LEFT FACE
 			-0.25, -0.25, 0.25,
 
 			-0.25, -0.25, -0.25,
+			
+
+			// // LEFT FACE
+			-0.25, -0.25, 0.25,
 
 			-0.25, 0.25, -0.25,
+
+			-0.25, -0.25, -0.25,			
 
 			
 			-0.25, -0.25, 0.25,
-			
-			-0.25, 0.25, -0.25,
 
 			-0.25, 0.25, 0.25,
+			
+			-0.25, 0.25, -0.25,			
 
 
-			// RIGHT FACE
+			// // RIGHT FACE
 			0.25, -0.25, 0.25,
 
 			0.25, -0.25, -0.25,
@@ -211,20 +212,20 @@ The JavaScript code for WebGL.
 
 			0.25, 0.25, 0.25,
 
-			// BACK FACE
+			// // BACK FACE
+
+			-0.25, 0.25, -0.25,
 
 			0.25, -0.25, -0.25,
+
+			-0.25, -0.25, -0.25,
+
+
+			-0.25, 0.25, -0.25,
 
 			0.25, 0.25, -0.25,
 
-			-0.25, 0.25, -0.25,
-
-
 			0.25, -0.25, -0.25,
-
-			-0.25, 0.25, -0.25,
-
-			-0.25, -0.25, -0.25,
 
     ];
 
@@ -263,7 +264,7 @@ The JavaScript code for WebGL.
 
 			1.00,  0.00,  0.5,
 
-			 // BOTTOM FACE
+			//  // BOTTOM FACE
 
 			0.00,  0.7,  1.00,
 
@@ -276,10 +277,10 @@ The JavaScript code for WebGL.
 
 			0.00,  0.7,  1.00,
 
-			0.00,  0.7,  1.00,
+			0.00,  0.7,  1.00,			
 			
 
-			 // LEFT FACE
+			//  // LEFT FACE
 			 0.5,  0.3,  0.00,
 
 			 0.5,  0.3,  0.00,
@@ -293,7 +294,7 @@ The JavaScript code for WebGL.
 
 			 0.5,  0.3,  0.00,
 
-			 // RIGHT FACE
+			//  // RIGHT FACE
 			 0.00,  0.00,  0.00,	//preto
 
 			 0.00,  0.00,  0.00,
@@ -308,7 +309,7 @@ The JavaScript code for WebGL.
 			 0.00,  0.00,  0.00,
 					
 
-			 // BACK FACE
+			//  // BACK FACE
 			0.00,  1.00,  0.0,	//verde
 
 			0.00,  1.00,  0.0,
@@ -879,7 +880,7 @@ The JavaScript code for WebGL.
 			// DEFAULT: The viewport background color is WHITE
 
 			// COMPLETE THE CODE : Enable BACK-FACE CULLING
-
+			gl.enable(gl.CULL_FACE);
 
         } catch (e) {
         }
