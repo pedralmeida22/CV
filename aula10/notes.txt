@@ -1,0 +1,16 @@
+Contrast is the difference between maximum and minimum pixel intensity.
+
+ex6 - Constrast Stretching - https://www.tutorialspoint.com/dip/histogram_stretching.htm
+aumentar o contraste, o histograma "espande", há mais valores nos extremos
+
+formula: g(x,y) = ((f(x,y) - min) / max - min) * 255
+
+se na imagem original houver pixels com os valores max e min (0 e 255) o algoritmo nao funciona, a formula fica apenas:
+	g(x,y) = f(x,y)
+ou seja, a imagem de saida é igual à original
+
+
+
+ex7- Histogram-Equalization - https://www.tutorialspoint.com/dip/histogram_equalization.htm
+realçar contraste
+the overall shape of the histogram changes
