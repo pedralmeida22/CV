@@ -1,14 +1,5 @@
-# Aula_03_ex_04.py
-#
-# Sobel Operator
-#
-# Paulo Dias - 10/2019
-
-
 import cv2
 import numpy as np
-import sys
-import math
 
 
 ##########################
@@ -31,15 +22,7 @@ def printImageFeatures(image):
 # MAIN
 
 # image = cv2.imread(sys.argv[1], cv2.IMREAD_UNCHANGED)
-img = "Lena_Ruido.png"
-img2 = "DETI_Ruido.png"
-img = "lena-saltandpepper.tif"
-# img = "fce5noi3.bmp"
-# img = "fce5noi4.bmp"
-# img = "fce5noi6.bmp"
-img = "Bikesgray.jpg"
-# img = "wdg2.bmp"
-# img = "tools_2.png"
+img = "art3.bmp"
 image = cv2.imread(img, cv2.IMREAD_UNCHANGED)
 
 if np.shape(image) == ():
@@ -49,20 +32,21 @@ if np.shape(image) == ():
 
 printImageFeatures(image)
 
-cv2.imshow('Original', image)
+cv2.imshow('Orginal', image)
 
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
+img_erode = cv2.erode(image, kernel, iterations=1)
+# cv2.imshow('Dilation_square', img_erode)
 
-def mouse_handler(event, x, y, flags, params):
-    if event == cv2.EVENT_LBUTTONDOWN:
-        print("left click")
-        seed = (x, y)
-        cv2.floodFill(image, None, seedPoint=seed, newVal=(0, 0, 255), loDiff=(5, 5, 5, 5), upDiff=(5, 5, 5, 5))
-        cv2.imshow("flood", image)
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
+img_dilation = cv2.dilate(img_erode, kernel, iterations=1)
+cv2.imshow('opening', img_dilation)
 
+# same thing
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
+opening = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+cv2.imshow('opening2', opening)
 
-cv2.namedWindow("flood", cv2.WINDOW_AUTOSIZE)
-cv2.imshow("flood", image)
-cv2.setMouseCallback("flood", mouse_handler)
 
 cv2.waitKey(0)
 

@@ -1,14 +1,5 @@
-# Aula_03_ex_04.py
-#
-# Sobel Operator
-#
-# Paulo Dias - 10/2019
-
-
 import cv2
 import numpy as np
-import sys
-import math
 
 
 ##########################
@@ -31,15 +22,7 @@ def printImageFeatures(image):
 # MAIN
 
 # image = cv2.imread(sys.argv[1], cv2.IMREAD_UNCHANGED)
-img = "Lena_Ruido.png"
-img2 = "DETI_Ruido.png"
-img = "lena-saltandpepper.tif"
-# img = "fce5noi3.bmp"
-# img = "fce5noi4.bmp"
-# img = "fce5noi6.bmp"
-img = "Bikesgray.jpg"
-# img = "wdg2.bmp"
-# img = "tools_2.png"
+img = "wdg2.bmp"
 image = cv2.imread(img, cv2.IMREAD_UNCHANGED)
 
 if np.shape(image) == ():
@@ -49,20 +32,21 @@ if np.shape(image) == ():
 
 printImageFeatures(image)
 
-cv2.imshow('Original', image)
+cv2.imshow('Orginal', image)
 
+# ret,thresh1 = cv2.threshold(image, 120, 255, cv2.THRESH_BINARY)
+# cv2.imshow('threshold', thresh1)
 
-def mouse_handler(event, x, y, flags, params):
-    if event == cv2.EVENT_LBUTTONDOWN:
-        print("left click")
-        seed = (x, y)
-        cv2.floodFill(image, None, seedPoint=seed, newVal=(0, 0, 255), loDiff=(5, 5, 5, 5), upDiff=(5, 5, 5, 5))
-        cv2.imshow("flood", image)
+ret,thresh2 = cv2.threshold(image, 120, 255, cv2.THRESH_BINARY_INV)
+cv2.imshow('threshold_inv', thresh2)
 
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
+img_erode = cv2.erode(thresh2, kernel, iterations=3)
+cv2.imshow('erode', img_erode)
 
-cv2.namedWindow("flood", cv2.WINDOW_AUTOSIZE)
-cv2.imshow("flood", image)
-cv2.setMouseCallback("flood", mouse_handler)
+kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (11, 11))
+img_erode = cv2.erode(thresh2, kernel, iterations=3)
+cv2.imshow('erode_square', img_erode)
 
 cv2.waitKey(0)
 
