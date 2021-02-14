@@ -37,7 +37,7 @@ cv2.imshow('Orginal', image)
 # ret,thresh1 = cv2.threshold(image, 120, 255, cv2.THRESH_BINARY)
 # cv2.imshow('threshold', thresh1)
 
-ret,thresh2 = cv2.threshold(image, 120, 255, cv2.THRESH_BINARY_INV)
+ret, thresh2 = cv2.threshold(image, 120, 255, cv2.THRESH_BINARY_INV)
 cv2.imshow('threshold_inv', thresh2)
 
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))

@@ -1,0 +1,143 @@
+1)	Dada uma cena bidimensional, a partir da qual se pretende gerar uma imagem num ecrã, o viewport é:
+
+a)	A zona da cena, no sistema de coordenadas do mundo, que se pretende representar.
+b)	A zona do ecrã, no sistema de coordenadas do dispositivo, onde se pretende representar a cena. X
+c)	A zona da cena no sistema de coordenadas do dispositivo, que se pretende representar
+d)	Nenhuma das anteriores
+
+2)	Considerando que um ponto num espaço 2D é representado por um vector, a matriz R:
+
+a)	Corresponde a uma rotação em torno da origem de um ângulo de rotação ?, no sentido anti-horário. X
+b)	Corresponde a uma rotação em torno da origem de um ângulo de rotação ?, no sentido horário.
+c)	Corresponde a uma rotação em torno da origem de um ângulo de rotação ?, em qualquer dos sentidos.
+d)	Nenhuma das anteriores.
+
+3)	A Figura mostra as primeiras transformações em que se pode decompor uma transformação composta 2D frequentemente usada:
+
+a)	A transformação composta é uma rotação em torno de um ponto arbitrário
+b)	A transformação que falta é uma translação correspondente à mudança de a) para b) ???
+c)	Ambas as anteriores X
+d)	Nenhuma das anteriores
+
+4)	Considerando que um ponto num espaço 3D se pode representar por um vector, uma matriz de transformação T, resultante da 
+concatenação das matrizes de três transformação pode obter-se:
+
+a)	Multiplicando as matrizes: T=T1.T2.T3, sendo T1 correspondente à primeira transformação a aplicar, T2 à segunda e T3 à terceira.
+b)	Multiplicando as matrizes: T= T3.T2.T1 sendo T1 correspondente à primeira transformação a aplicar, T2 à segunda e T3 à terceira. X
+c)	De qualquer das formas, que são equivalentes
+d)	Nenhuma das anteriores está correcta
+
+5)	Nas projecções geométricas planas
+
+a)	O plano de projecção é uma superfície qualquer
+b)	Os projectores são linhas rectas X
+c)	Ambas as anteriores são correctas
+d)	Nenhuma das anteriores está correcta
+
+6)	Considere a figuram, que representa um cubo utilizando:
+a)	Uma projecção perspectiva
+b)	Uma projecção cavaleira
+c)	Paralela ortográfica.
+d)	Nenhuma das anteriores está correcta.
+
+
+7)	Considere a figura. Representa várias vistas do mesmo objecto; a projecção utilizada para gerar a vista de cima é:
+a)	Uma projecção de gabinete
+b)	Uma projecção paralela ortográfica X
+c)	Uma projecção axonométrica.
+d)	Nenhuma das anteriores está correcta
+
+8)	Se a superfície for um espelho ideal, L a direcção dos raios luminosos incidentes, R a direcção dos reflectidos e V a direcção de visualização, o observador vê uma reflexão especular:
+a)	Qualquer que seja o ângulo ?
+b)	Quando ?=0
+c)	Quando ?=90
+d)	Nenhuma das anteriores está correcta
+
+9)	O método de surface rendering de Gouraud tem, em relação ao método de Phong, vantagens:
+a)	É menos oneroso computacionalmente X
+b)	Produz reflexões especulares (highlghts) mais realistas
+c)	Ambas as anteriores estão correctas
+d)	Nenhuma das anteriores está correcta
+
+10)	As bandas de Mach são mais atenuadas quando se o utiliza o método de surface  rendering:
+a)	De Gouraud
+b)	De Phong X
+c)	Uniforme ou flat
+d)	Não há diferença entre qualquer dos métodos anteriores, quanto a este aspecto
+
+11)	A transparência pode ser simulada com grande realismo, usando a lei de snell, segundo a qual, numa interface entre dois meios:
+a)	O raio refractado muda de direcção em relação ao raio incidente. X
+b)	O raio refractado é atenuado em relação ao raio incidente
+c)	O raio refractado tem a mesma direcção e o 
+d)	Nenhuma das anteriores
+
+12)	Uma aproximação mais simples à transparência consiste em igualar a mudança de  direcção dos raios luminosos entre meios:
+a)	O que é rápido e aproximadamente correcto para superfícies esféricas
+b)	O que é rápido e aproximadamente correcto para superfícies poligonais de pequena esp.. X
+c)	Ambas as anteriores
+d)	Nenhuma das anteriores
+
+
+13)	O sistema visual humano inclui dois tipos de visão:
+a)	A visão fotópica que é sensível à cor
+b)	A visão escotópica que não é sensível à cor
+c)	Ambas as anteriores estão correctas X
+d)	Nenhuma das anteriores
+
+14)	A sensação de cor que um observador tem em relação a uma …
+a)	Com o espectro da luz reflectida pela amostra
+b)	Com o tamanho da amostra e a cor envolvente
+c)	Ambas as anteriores estão correctas X
+d)	Nenhuma das anteriores
+
+15)	A figura mostra o diagrama de cromaticidade CIE com as gamas de cor representáveis por um filme, um monitor e uma impressora:
+a)	A corresponde ao filme, B à impressora e C ao monitor
+b)	A corresponde à impressora, B ao monitor e C ao filme X
+c)	A corresponde à impressora, B ao filme e C ao monitor
+d)	Nenhuma das anteriores
+
+16)	Considere o modelo CIELab:
+a)	Cores equidistantes no correspondente espaço são percebidas aproximadamente equidistantes
+b)	Não é uma transformação ou aproximação ao modelo CIE
+c)	Ambas as anteriores estão correctas X
+d)	Nenhuma das anteriores está correcta
+
+17)	O diagrama de cor CIE, é útil para:
+a)	Comparar gamas de cor para diferentes primárias
+b)	Identificar cores complementares
+c)	Ambas as anteriores estão correctas X
+d)	Nenhuma das anteriores está correcta
+
+18)	Dadas as imagens A e B e os histogramas H1 e H2 destas imagens..
+a)	H1 é o histograma de A
+b)	H2 é o histograma de B
+c)	Ambas as anteriores estão correctas
+d)	Nenhuma das anteriores está correcta  (H1 é a de A)
+
+
+
+Verdadeiras ou falsas:
+
+1.	As projecções perspectivas permitem produzir imagens mais realistas, mas são mais onerosas computacionalmente com as projecções paralelas. V
+
+2.	Uma projecção di… é um tipo de projcção paralela oblíqua. F
+
+3.	Uma transformação de corpo rígido não pode incluir translações  F
+
+4.	O modelo de iluminação de phong inclui componentes correspondentes à reflexão difusa e reflexão especular, mas não inclui nenhuma componente correspondente à iluminação ambiente F
+
+5.	Usando uma  Hall approximation matrix de n X n podem representer-se no máximo n3 +1 tons diferentes num dispositivo e display binário. .??  F
+
+6.	A transparência não pode ser modelada num ray-tracer F
+
+7.	As células sensíveis à luz que servem de base À visão a cores são os bastonetes, que existem em três tipos diferentes. F
+
+8.	O modelo de cor de Munsell é um modelo perceptualmente corrigido baseado no modelo de CIE. F
+
+9.	Os modelos de cor YIQ e YUV foram desenvolvidos para compatibilizar a televisão a cores com os televisores a preto e branco V
+
+10.	Não há um método de segmentação de imagem perfeito. V
+
+11.	A máscara da figura detecta as arestas verticais no detector de Sobel 
+
+12.	Os detectores de Marr Hidreth e Canny usam uma aproximação ao Laplaciano V
